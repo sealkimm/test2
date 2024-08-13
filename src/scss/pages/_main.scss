@@ -455,6 +455,7 @@
 				position: absolute;
 				right: -100px;
 				width: auto;
+				height: 100%;
 			}
 			.title-wrap {
 				top: calc(50% + 28px);
@@ -519,7 +520,6 @@
 						}
 						.desc {
 							font-size: pxToVw3(30px);
-							word-break: keep-all;
 						}
 					}
 				}
@@ -543,7 +543,6 @@
 				.desc {
 					font-size: pxToVw3(30px);
 					text-align: center;
-					word-break: keep-all;
 				}
 			}
 			.menu-group {

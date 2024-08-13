@@ -203,9 +203,21 @@
 						}
 					}
 					.desc {
-						word-break: keep-all;
 						span {
 							display: inline-block;
+						}
+					}
+				}
+				.store-area {
+					.store-list {
+						padding: 0;
+						strong {
+							display: block;
+							margin-bottom: pxToVw3(14px);
+							margin-right: 0;
+							&::after {
+								display: none;
+							}
 						}
 					}
 				}

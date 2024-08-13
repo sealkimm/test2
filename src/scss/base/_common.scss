@@ -1,5 +1,7 @@
 @import '../helpers/functions';
-
+* {
+	word-break: keep-all;
+}
 html,
 body {
 	font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;

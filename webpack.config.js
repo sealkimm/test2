@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
-    // publicPath: '/', // 웹서버의 루트 디렉토리로 설정
+    publicPath: 'https://sealkimm.github.io/test2/', // 웹서버의 루트 디렉토리로 설정
   },
   module: {
     rules: [
