@@ -197,21 +197,21 @@
 </div>
 
 <script>
-	const showPopBtn = document.querySelector('.contact .check .show-pop-btn');
-	const agreePop = document.querySelector('.agree-pop');
-	const closePopBtn = agreePop.querySelector('.agree-pop .closePopBtn');
+	const $showPopBtn = document.querySelector('.contact-pg .check .show-pop-btn');
+	const $agreePop = document.querySelector('.agree-pop');
+	const $closePopBtn = $agreePop.querySelector('.agree-pop .closePopBtn');
 
 	//팝업 열기
-	if (showPopBtn && agreePop) {
-		showPopBtn.addEventListener('click', () => {
-			agreePop.style.display = 'block';
+	if ($showPopBtn && $agreePop) {
+		$showPopBtn.addEventListener('click', () => {
+			$agreePop.style.display = 'block';
 		});
 	}
 
 	// 팝업 닫기
-	if (closePopBtn && agreePop) {
-		closePopBtn.addEventListener('click', () => {
-			agreePop.style.display = 'none';
+	if ($closePopBtn && $agreePop) {
+		$closePopBtn.addEventListener('click', () => {
+			$agreePop.style.display = 'none';
 		});
 	}
 </script>
