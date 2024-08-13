@@ -1,0 +1,10 @@
+@mixin tab-only {
+	@media screen and (max-width: (1200px)) {
+		@content;
+	}
+}
+@mixin mob-only {
+	@media screen and (max-width: (768px)) {
+		@content;
+	}
+}

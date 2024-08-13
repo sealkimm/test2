@@ -1,0 +1,127 @@
+.brands-pg {
+	padding-top: 100px;
+	.brands-wrap {
+		position: relative;
+		max-width: 1300px;
+		padding: 160px 0 260px;
+		margin: 0 auto;
+	}
+	.sc-brands {
+		// sc- 바꾸기, brands-group 이런것도
+		position: relative;
+		.title-group {
+			@include textPadding();
+			.title {
+				position: relative;
+				font-size: 45px;
+				font-weight: 600;
+				text-align: center;
+				&::before,
+				&::after {
+					position: absolute;
+					top: 50%;
+					display: block;
+					background-color: $black-color;
+					transform: translateY(-50%);
+					content: '';
+					@include size(35%, 1px);
+				}
+				&::after {
+					right: 0;
+				}
+			}
+		}
+		.brands-group {
+			padding-top: 130px;
+			.brands-list {
+				display: flex;
+				gap: 20px;
+				justify-content: space-between;
+				padding: 0 50px;
+			}
+			.brands-item {
+				@include size(360px, 100%);
+				position: relative;
+				overflow: hidden;
+				border-radius: 15px;
+				cursor: pointer;
+				.name {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					z-index: 15;
+					font-size: 34px;
+					white-space: nowrap;
+					color: #fff;
+					transform: translate(-50%,-50%);
+					transition: opacity .2s;
+				}
+				.overlay {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 10;
+					background-color: rgba(0,0,0,.5);
+					transition: opacity .2s;
+					@include size(100%, 100%);
+				}
+				img {
+					transition: transform .2s;
+				}
+				a {
+					display: block;
+				}
+				&:hover {
+					.overlay,
+					.name {
+						opacity: 0;
+					}
+					img {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+
+	@include mob-only {
+		padding-top: pxToVw3(110px);
+		.brands-wrap {
+			padding: pxToVw3(190px) 20px pxToVw3(280px);
+		}
+		.sc-brands {
+			.title-group {
+				padding: 0;
+				.title {
+					font-size: pxToVw3(70px);
+					&::before,
+					&::after {
+						width: 22%;
+					}
+				}
+			}
+			.brands-group {
+				padding-top: pxToVw3(210px);
+				.brands-list {
+					flex-direction: column;
+					align-items: center;
+					padding: 0 pxToVw3(32px);
+					gap: pxToVw3(54px);
+				}
+				.brands-item {
+					@include size(100%, pxToVw3(380px));
+					border-radius: pxToVw3(18px);
+					.name {
+						font-size: pxToVw3(50px);
+					}
+					img {
+						position: absolute;
+						top: -100px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="viewport" content="user-scalable=no, ,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, viewport-fit=cover," />
+		<meta name="description" content="유러피안 F&B, 평온하고 품격있는 외식업 문화를 선도하는 BUUK - 메뉴, 브랜드, 매장, 가맹안내 등" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="유러피안 F&B, 평온하고 품격있는 외식업 문화를 선도하는 BUUK - 메뉴, 브랜드, 매장, 가맹안내 등" />
+		<meta property="og:locale" content="ko_KR" />
+		<meta property="og:image" content="../img/common/logo.png" />
+		<meta name="robots" content="index,follow" />
+		<meta name="keywords" content="부엌간, 부엌간차이니즈, 카페드부엌, 외식업프랜차이즈, buuk" />
+
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+		<!-- swiper -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+		{% if pageInfo.title -%}
+		<title>{{pageInfo.title}} | BUUK</title>
+		<meta property="og:title" content="스키니랩 : 자기관리의 시작, 스키니랩" />
+		<meta property="og:url" content="https://www.skinnylab.co.kr/" />
+		{% else -%}
+		<title>BUUK</title>
+		{% endif %}
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- header -->
+			{% include 'header.html' %}
+			<!--// header -->
+
+			<!-- content -->
+			{% block content %}{% endblock %}
+			<!-- //content -->
+
+			<!-- floatingBtn -->
+			{% include 'floatingBtn.html' %}
+			<!-- //floatingBtn -->
+
+			<!-- footer -->
+			{% include 'footer.html' %}
+			<!-- //footer -->
+		</div>
+	</body>
+</html>
