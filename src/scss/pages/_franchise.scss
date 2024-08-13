@@ -27,22 +27,21 @@
 		@include textPadding();
 		.process-wrap {
 			max-width: 1300px;
-			padding: 192px 0 208px;
+			padding: 150px 0 260px;
 			margin: 0 auto;
 		}
 		h3 {
-			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			font-size: 45px;
 			font-weight: 600;
 			text-align: center;
+			gap: 46px;
 			margin-bottom: 280px;
 			&::after {
-				position: absolute;
-				top: 110px;
-				left: 50%;
 				display: block;
 				background-color: $black-color;
-				transform: translateX(-50%);
 				content: '';
 				@include size(1px, 130px);
 			}
@@ -93,6 +92,66 @@
 				&:nth-child(8) {
 					&::after {
 						display: none;
+					}
+				}
+			}
+		}
+	}
+	@include mob-only {
+		.banner-group {
+			@include size(100%, pxToVw3(550px));
+			.title {
+				font-size: pxToVw3(64px);
+				margin-top: 55px;
+			}
+		}
+		.process-group {
+			.process-wrap {
+				padding: pxToVw3(190px) 20px pxToVw3(280px);
+			}
+			h3 {
+				padding: 0 10vw;
+				font-size: pxToVw3(70px);
+				gap: pxToVw3(50px);
+				margin-bottom: pxToVw3(140px);
+				&::after {
+					display: none;
+				}
+			}
+			.process-list {
+				gap: pxToVw3(90px);
+				grid-template-columns: repeat(1,1fr);
+				li {
+					gap: pxToVw3(14px);
+					padding: pxToVw3(50px) 0;
+					@include size(100%, auto);
+					.num {
+						font-size: pxToVw3(42px);
+					}
+					.tit {
+						font-size: pxToVw3(40px);
+						margin-top: pxToVw3(20px);
+					}
+					.text {
+						font-size: pxToVw3(30px);
+						margin-top: 0;
+					}
+					&::after {
+						top: 107.2%;
+						right: 50%;
+						transform: translateX(0) rotate(90deg);
+						@include size(pxToVw3(20px), pxToVw3(36px));
+					}
+					&:nth-child(4),
+					&:nth-child(8) {
+						&::after {
+							display: block;
+						}
+					}
+					&:last-child {
+						&::after {
+							display: none;
+						}
 					}
 				}
 			}

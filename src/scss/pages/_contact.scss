@@ -1,10 +1,9 @@
 .contact-pg {
-	min-height: 90vh; // 지우기
 	background-color: $sub-bg-color;
 	padding-top: 100px;
 	.contact-wrap {
 		max-width: 1300px;
-		padding: 82px 0 147px;
+		padding: 150px 0 260px;
 		margin: 0 auto;
 	}
 	.title-group {
@@ -146,6 +145,22 @@
 				color: #fff;
 				background-color: $primary-color;
 				border-radius: 100px;
+			}
+		}
+	}
+
+	@include mob-only {
+		padding-top: 55px;
+		.contact-wrap {
+			padding: pxToVw3(190px) 0 pxToVw3(280px);
+		}
+		.title-group {
+			dt {
+				font-size: pxToVw3(70px);
+			}
+			dd {
+				font-size: pxToVw3(30px);
+				margin-top: pxToVw3(20px);
 			}
 		}
 	}

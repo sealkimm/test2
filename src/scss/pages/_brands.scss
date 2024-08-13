@@ -3,7 +3,7 @@
 	.brands-wrap {
 		position: relative;
 		max-width: 1300px;
-		padding: 160px 0 260px;
+		padding: 150px 0 260px;
 		margin: 0 auto;
 	}
 	.sc-brands {
@@ -12,19 +12,19 @@
 		.title-group {
 			@include textPadding();
 			.title {
-				position: relative;
+				display: flex;
+				align-items: center;
 				font-size: 45px;
 				font-weight: 600;
 				text-align: center;
+				gap: 70px;
+
 				&::before,
 				&::after {
-					position: absolute;
-					top: 50%;
 					display: block;
 					background-color: $black-color;
-					transform: translateY(-50%);
 					content: '';
-					@include size(35%, 1px);
+					@include size(100%, 1px);
 				}
 				&::after {
 					right: 0;
@@ -87,7 +87,7 @@
 	}
 
 	@include mob-only {
-		padding-top: pxToVw3(110px);
+		padding-top: 55px;
 		.brands-wrap {
 			padding: pxToVw3(190px) 20px pxToVw3(280px);
 		}
@@ -96,6 +96,7 @@
 				padding: 0;
 				.title {
 					font-size: pxToVw3(70px);
+					gap: pxToVw3(70px);
 					&::before,
 					&::after {
 						width: 22%;

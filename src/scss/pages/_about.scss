@@ -2,7 +2,7 @@
 	padding-top: 100px;
 	.about-wrap {
 		max-width: 1300px;
-		padding: 160px 0 260px;
+		padding: 150px 0 260px;
 		margin: 0 auto;
 	}
 	.text-group {
@@ -43,12 +43,12 @@
 	}
 
 	@include mob-only {
-		padding-top: pxToVw3(110px);
+		padding-top: 55px;
 		.about-wrap {
-			padding: pxToVw3(190px) 0 pxToVw3(280px);
-			margin: 0 auto;
+			padding: pxToVw3(190px) pxToVw3(50px) pxToVw3(280px);
 		}
 		.text-group {
+			padding: 0;
 			.main {
 				font-size: pxToVw3(120px);
 			}
@@ -67,6 +67,7 @@
 			flex-direction: column;
 			gap: pxToVw3(110px);
 			margin-top: pxToVw3(220px);
+			padding: 0;
 			li {
 				padding: 0 pxToVw3(130px);
 				&:nth-child(2) {
