@@ -345,6 +345,8 @@
 </main>
 
 <script>
+	gsap.registerPlugin(ScrollTrigger);
+
 	const mainStoreLeftSwiper = new Swiper('.sc-store .col-left .col-left-swiper', {
 		loop: true,
 		slidesPerView: 'auto',
@@ -379,5 +381,19 @@
 			},
 		},
 	});
+
+	// gsap.set('.sc-about .text-group', { y: 200, opacity: 0 });
+	// gsap.to('.sc-about .text-group', {
+	// 	scrollTrigger: {
+	// 		trigger: '.sc-about', //객체기준범위
+	// 		start: '0% 80%', //시작 지점
+	// 		end: '100% 80%', //끝 지점
+	// 		// end: "+=500"//시작 부분부터 500px까지 스크롤 한 후종료
+	// 		scrub: 1, //부드러운 스크러빙
+	// 		markers: true, //개발가이드선
+	// 	},
+	// 	y: 0,
+	// 	opacity: 1,
+	// });
 </script>
 {% endblock %}

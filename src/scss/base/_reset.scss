@@ -185,6 +185,11 @@ select {
 	appearance: none;
 	border-radius: 0;
 }
+input:focus,
+textarea:focus,
+select:focus {
+	outline: 1px solid #888;
+}
 
 button {
 	background-color: transparent;
