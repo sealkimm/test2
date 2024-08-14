@@ -72,10 +72,18 @@ textarea::placeholder {
 	@include mob-only {
 		line-height: pxToVw3(68px);
 		border-radius: 20vw;
-		margin-top: pxToVw3(80px);
+		margin-top: pxToVw3(40px);
 		@include size(pxToVw3(270px), pxToVw3(68px));
 		span {
 			font-size: pxToVw3(32px);
+		}
+		&:hover {
+			span {
+				color: inherit;
+			}
+			&::after {
+				width: 0;
+			}
 		}
 	}
 }

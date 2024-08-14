@@ -99,7 +99,7 @@
 	}
 	@include mob-only {
 		.banner-group {
-			@include size(100%, pxToVw3(550px));
+			@include size(100%, pxToVw3(460px));
 			.title {
 				font-size: pxToVw3(64px);
 				margin-top: 55px;
@@ -107,13 +107,13 @@
 		}
 		.process-group {
 			.process-wrap {
-				padding: pxToVw3(190px) pxToVw3(32px) pxToVw3(280px);
+				padding: pxToVw3(130px) pxToVw3(32px) pxToVw3(150px);
 			}
 			h3 {
 				padding: 0 10vw;
 				font-size: pxToVw3(70px);
 				gap: pxToVw3(50px);
-				margin-bottom: pxToVw3(140px);
+				margin-bottom: pxToVw3(88px);
 				&::after {
 					display: none;
 				}

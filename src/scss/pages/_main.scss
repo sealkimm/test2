@@ -293,9 +293,6 @@
 			}
 		}
 		.img-group {
-			// position: absolute;
-			// top: 0;
-			// left: 0;
 			display: flex;
 			align-items: flex-start;
 			box-sizing: border-box;
@@ -306,24 +303,15 @@
 			.col-left,
 			.col-right {
 				display: flex;
-				flex: 1;
-				flex-direction: column;
-				gap: 36px;
-				height: 100%;
+				overflow: hidden;
+				@include size(100%, 100%);
 			}
 			.swiper-wrapper {
-				display: flex;
-				flex-direction: column;
-				// gap: 36px;
-				transform: translate3d(0,0,0);
 				transition-timing-function: linear;
 				.swiper-slide {
-					height: auto !important;
-				}
-				.card {
-					position: relative;
-					display: block;
 					overflow: hidden;
+					width: auto;
+					height: auto;
 					border-radius: 30px;
 					&:hover {
 						.circle {
@@ -438,7 +426,6 @@
 			&:hover {
 				.circle {
 					@include size(204px, 204px);
-					// transform: translate(-50%,-50%) scale(1.95);
 				}
 				.img {
 					animation-play-state: paused;
@@ -472,10 +459,10 @@
 			}
 		}
 		.sc-about {
-			@include size(100%, 94vh);
-			padding: pxToVw3(140px) 0 0;
+			@include size(100%, 90vh);
+			padding: pxToVw3(130px) 0 0;
 			.text-group {
-				gap: pxToVw3(100px);
+				gap: pxToVw3(80px);
 				.title {
 					font-size: pxToVw3(42px);
 				}
@@ -507,8 +494,8 @@
 				display: block;
 				.text-area {
 					width: 100%;
-					padding: pxToVw3(180px) 20px pxToVw3(160px);
-					gap: pxToVw3(100px);
+					padding: pxToVw3(130px) 20px pxToVw3(130px);
+					gap: pxToVw3(60px);
 					.title {
 						font-size: pxToVw3(70px);
 					}
@@ -532,13 +519,13 @@
 			}
 		}
 		.sc-menu {
-			padding: pxToVw3(140px) 0 0;
+			padding: pxToVw3(100px) 0 0;
 			.text-group {
 				flex-direction: column;
 				align-items: center;
 				gap: pxToVw3(28px);
 				.title {
-					font-size: pxToVw3(60px);
+					font-size: pxToVw3(70px);
 				}
 				.desc {
 					font-size: pxToVw3(30px);
@@ -554,18 +541,18 @@
 				}
 				.brand-wrap {
 					flex-direction: column;
-					gap: pxToVw3(70px);
-					padding: pxToVw3(90px) 0 pxToVw3(90px);
+					gap: pxToVw3(60px);
+					padding: pxToVw3(100px) 0 pxToVw3(100px);
 					.brand {
 						font-size: pxToVw3(50px);
 					}
 					.menu-list {
 						display: grid;
-						gap: 50px;
+						gap: pxToVw3(60px);
 						grid-template-columns: repeat(2,1fr);
 						figcaption {
 							font-size: pxToVw3(30px);
-							margin-top: pxToVw3(40px);
+							margin-top: pxToVw3(30px);
 						}
 					}
 					&.second {
@@ -578,6 +565,7 @@
 			}
 		}
 		.sc-store {
+			@include size(100%, 90vh);
 			.text-group {
 				gap: pxToVw3(38px);
 				.title {
@@ -602,19 +590,17 @@
 					height: auto;
 					.swiper-slide {
 						width: pxToVw3(550px) !important;
-						.card {
-							border-radius: 15px;
-							dl {
-								gap: pxToVw3(60px);
-							}
-							dt {
-								font-size: pxToVw3(38px);
-							}
-							dd {
-								font-size: pxToVw3(25px);
-								&::before {
-									width: 30px;
-								}
+						border-radius: 15px;
+						dl {
+							gap: pxToVw3(60px);
+						}
+						dt {
+							font-size: pxToVw3(38px);
+						}
+						dd {
+							font-size: pxToVw3(25px);
+							&::before {
+								width: 30px;
 							}
 						}
 					}
@@ -622,13 +608,13 @@
 			}
 		}
 		.sc-contact {
-			padding: pxToVw3(168px) 0 pxToVw3(260px);
+			padding: pxToVw3(140px) 0 pxToVw3(240px);
 			.text-group {
 				.contact {
 					font-size: pxToVw3(35px);
 				}
 				.title {
-					padding: pxToVw3(50px) 0 pxToVw3(162px);
+					padding: pxToVw3(40px) 0 pxToVw3(152px);
 					font-size: pxToVw3(70px);
 					span {
 						display: block;

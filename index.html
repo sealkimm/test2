@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	</head>
+	<body>
+		<style>
+			.swiper {
+			}
+			.swiper-wrapper {
+				transition-timing-function: linear;
+			}
+			.swiper-slide {
+				background: linear-gradient(45deg, rgb(173, 255, 246), rgb(221, 255, 219));
+				/* display: flex; */
+				/* justify-content: center; */
+				/* align-items: center; */
+				border-radius: 20px;
+				width: 30vw;
+				height: 20vw;
+			}
+			.wrapper {
+				display: flex;
+				gap: 100px;
+				width: 100%;
+				height: 80vh;
+				border: 1px solid red;
+				overflow: hidden;
+				/* flex-direction: column; mob */
+			}
+		</style>
+		<div class="wrapper">
+			<div class="swiper test1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+					<div class="swiper-slide">Slide 5</div>
+					<div class="swiper-slide">Slide 6</div>
+					<div class="swiper-slide">Slide 7</div>
+				</div>
+			</div>
+			<div class="swiper test2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+					<div class="swiper-slide">Slide 5</div>
+					<div class="swiper-slide">Slide 6</div>
+					<div class="swiper-slide">Slide 7</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const swiper = new Swiper('.swiper.test1', {
+				loop: true,
+				speed: 5000,
+				allowTouchMove: false,
+				slidesPerView: 'auto',
+				spaceBetween: 40,
+				direction: 'vertical',
+				autoplay: {
+					delay: 1,
+				},
+				// breakpoints: {
+				// 	768: {
+				// 		direction: 'vertical',
+				// 	},
+				// },
+			});
+			const swiper2 = new Swiper('.swiper.test2', {
+				loop: true,
+				speed: 5000,
+				allowTouchMove: false,
+				slidesPerView: 'auto',
+				spaceBetween: 40,
+				direction: 'vertical',
+				autoplay: {
+					delay: 1,
+					reverseDirection: true,
+				},
+				// breakpoints: {
+				// 	768: {
+				// 		direction: 'vertical',
+				// 	},
+				// },
+			});
+		</script>
+	</body>
+</html>

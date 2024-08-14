@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/test2/', // 웹서버의 루트 디렉토리로 설정
+    // publicPath: '/test2/', // 웹서버의 루트 디렉토리로 설정
   },
   module: {
     rules: [
@@ -92,22 +92,27 @@ module.exports = {
     }),
   ],
   devServer: {
-    // 뭔지 보고 필요없는거 지우기!!!!!!
-    static: {
-      directory: path.join(__dirname, 'dist'), // 정적 파일 제공 경로
-    },
-    compress: true,
-    port: 9000, // 개발 서버 포트
-    host: '0.0.0.0', // 모든 네트워크 인터페이스에서 접근 가능
-    client: {
-      // 브라우저 URL을 설정합니다
-      webSocketURL: {
-        hostname: 'localhost',
-        port: 9000,
-        pathname: '/ws',
-        protocol: 'ws',
-      },
-    },
-    watchFiles: ['src/**/*.html', 'src/**/*.js', 'src/**/*.scss'], // 파일 변경 시 자동 리로드
+    host: 'localhost',
+    open: true, // npm run dev 시 자동으로 브라우저 open
   },
 };
+
+// devServer: {
+//   // 뭔지 보고 필요없는거 지우기!!!!!!
+//   static: {
+//     directory: path.join(__dirname, 'dist'), // 정적 파일 제공 경로
+//   },
+//   // compress: true,
+//   // port: 9000, // 개발 서버 포트
+//   // host: '0.0.0.0', // 모든 네트워크 인터페이스에서 접근 가능
+//   // client: {
+//   //   // 브라우저 URL을 설정합니다
+//   //   webSocketURL: {
+//   //     hostname: 'localhost',
+//   //     port: 9000,
+//   //     pathname: '/ws',
+//   //     protocol: 'ws',
+//   //   },
+//   // },
+//   // watchFiles: ['src/**/*.html', 'src/**/*.js', 'src/**/*.scss'], // 파일 변경 시 자동 리로드
+// },

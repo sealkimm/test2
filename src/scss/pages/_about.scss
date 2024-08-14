@@ -10,6 +10,7 @@
 		.main {
 			font-size: 130px;
 			font-weight: 500;
+			line-height: 1;
 			color: $primary-color;
 		}
 		.sub {
@@ -45,7 +46,7 @@
 	@include mob-only {
 		padding-top: 55px;
 		.about-wrap {
-			padding: pxToVw3(190px) 20px pxToVw3(280px);
+			padding: pxToVw3(130px) 20px pxToVw3(150px);
 		}
 		.text-group {
 			padding: 0;
@@ -57,13 +58,13 @@
 			}
 			.desc {
 				font-size: pxToVw3(38px);
-				margin-top: pxToVw3(120px);
+				margin-top: pxToVw3(80px);
 			}
 		}
 		.logo-list {
 			flex-direction: column;
-			gap: pxToVw3(110px);
-			margin-top: pxToVw3(220px);
+			gap: pxToVw3(60px);
+			margin-top: pxToVw3(150px);
 			padding: 0;
 			li {
 				padding: 0 pxToVw3(130px);

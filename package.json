@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production",
-    "dev": "npm run build && webpack serve --open --mode=development",
+    "dev": "npm run build && webpack-dev-server --mode development",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],

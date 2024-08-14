@@ -50,25 +50,28 @@
 		.footer-wrap {
 			flex-direction: column;
 			align-items: flex-start;
-			padding: pxToVw3(110px) 20px;
+			padding: pxToVw3(70px) 20px;
+			.footer-logo {
+				@include size(pxToVw3(130px), pxToVw3(31px));
+			}
 		}
 		.col-left {
 			.info {
-				font-size: pxToVw3(30px);
-				margin-top: 36px;
+				font-size: pxToVw3(27px);
+				margin-top: pxToVw3(50px);
 				p {
 					flex-direction: column;
-					gap: pxToVw3(16px);
+					gap: pxToVw3(12px);
 				}
 			}
 			.copy {
 				font-size: pxToVw3(30px);
-				margin-top: 36px;
+				margin-top: pxToVw3(50px);
 			}
 		}
 
 		.col-right {
-			margin-top: 36px;
+			margin-top: pxToVw3(50px);
 			text-align: left;
 			p {
 				font-size: pxToVw3(30px);
