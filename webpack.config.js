@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
-    // publicPath: '/test2/', // 웹서버의 루트 디렉토리로 설정
+    publicPath: '/test2/', // 웹서버의 루트 디렉토리로 설정
   },
   module: {
     rules: [
