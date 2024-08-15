@@ -2,7 +2,7 @@
 	padding-top: 100px;
 	.about-wrap {
 		max-width: 1300px;
-		padding: 150px 0 260px;
+		padding: 120px 0 180px;
 		margin: 0 auto;
 	}
 	.text-group {
@@ -24,11 +24,11 @@
 		}
 	}
 	.logo-list {
-		@include textPadding();
 		display: flex;
-		gap: 28px;
+		gap: 80px;
 		justify-content: space-between;
-		margin-top: 182px;
+		margin-top: 142px;
+		padding: 0 80px;
 		text-align: center;
 		li {
 			// flex-shrink: 0;
@@ -57,13 +57,13 @@
 				font-size: pxToVw3(38px);
 			}
 			.desc {
-				font-size: pxToVw3(38px);
+				font-size: pxToVw3(32px);
 				margin-top: pxToVw3(80px);
 			}
 		}
 		.logo-list {
 			flex-direction: column;
-			gap: pxToVw3(60px);
+			gap: pxToVw3(68px);
 			margin-top: pxToVw3(150px);
 			padding: 0;
 			li {
@@ -81,7 +81,7 @@
 			}
 			.brand {
 				font-size: pxToVw3(40px);
-				font-weight: 400;
+				font-weight: 500;
 				margin-top: pxToVw3(64px);
 			}
 		}

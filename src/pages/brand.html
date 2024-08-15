@@ -192,48 +192,39 @@
 		},
 	});
 
-	// URL에서 브랜드 파라미터를 가져기
+	// URL에서 브랜드 파라미터를 가져오기
 	const urlParams = new URLSearchParams(window.location.search);
 	const brand = urlParams.get('brand');
 
 	const $brandPg = document.querySelector('.brand-pg');
 	const $scBrandInfo = document.querySelectorAll('.brand-pg .sc-brand-info');
 
-	// 브랜드별 페이지 높이값 매핑
-	const brandPgHeight = {
-		b1: {
-			pc: '2235px',
-			mob: '396vh',
-		},
-		b2: {
-			pc: '2060px',
-			mob: '283vh',
-		},
-		b3: {
-			pc: '1483px',
-			mob: '257vh',
-		},
-	};
+	const $brandPgHeight = document.querySelector(`.sc-brand-info.${brand}`);
 
-	const getBrandPgHeight = (brand) => {
-		const screenWidth = window.innerWidth;
-		const heights = brandPgHeight[brand];
+	// 각 브랜드 active 효과 + 페이지 높이값 설정
+	const updatePgHeight = () => {
+		$scBrandInfo.forEach((item) => {
+			if (item.classList.contains(brand)) {
+				item.classList.add('active');
+				// requestAnimationFrame(() => {
 
-		if (screenWidth <= 768) {
-			return heights.mob;
-		} else {
-			return heights.pc;
-		}
+				// });
+				setTimeout(() => {
+					$brandPg.style.height = `${$brandPgHeight.offsetHeight}px`;
+				}, 100);
+			} else {
+				item.classList.add('remove');
+			}
+		});
 	};
-	$scBrandInfo.forEach((item) => {
-		if (item.classList.contains(brand)) {
-			item.classList.add('active');
-			$brandPg.style.height = getBrandPgHeight(brand) || 'auto';
-		}
-	});
+	updatePgHeight();
 
 	window.addEventListener('resize', () => {
-		$brandPg.style.height = getBrandPgHeight(brand) || 'auto';
+		$brandPg.style.height = `${$brandPgHeight.offsetHeight}px`;
 	});
+
+	// window.addEventListener('popstate', () => {
+	// 	$brandPg.style.height = `${$brandPgHeight.offsetHeight}px`;
+	// });
 </script>
 {% endblock %}

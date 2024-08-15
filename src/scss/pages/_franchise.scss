@@ -27,7 +27,7 @@
 		@include textPadding();
 		.process-wrap {
 			max-width: 1300px;
-			padding: 150px 0 260px;
+			padding: 120px 0 180px;
 			margin: 0 auto;
 		}
 		h3 {
@@ -37,13 +37,13 @@
 			font-size: 45px;
 			font-weight: 600;
 			text-align: center;
-			gap: 46px;
+			gap: 30px;
 			margin-bottom: 80px;
 			&::after {
 				display: block;
 				background-color: $black-color;
 				content: '';
-				@include size(1px, 100px);
+				@include size(1px, 70px);
 			}
 		}
 		.process-list {
@@ -112,7 +112,8 @@
 			}
 			h3 {
 				padding: 0 10vw;
-				font-size: pxToVw3(70px);
+				font-size: pxToVw3(60px);
+				white-space: nowrap;
 				gap: pxToVw3(50px);
 				margin-bottom: pxToVw3(88px);
 				&::after {

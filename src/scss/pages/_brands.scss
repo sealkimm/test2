@@ -3,7 +3,7 @@
 	.brands-wrap {
 		position: relative;
 		max-width: 1300px;
-		padding: 150px 0 260px;
+		padding: 120px 0 180px;
 		margin: 0 auto;
 	}
 	.sc-brands {
@@ -32,7 +32,7 @@
 			}
 		}
 		.brands-group {
-			padding-top: 130px;
+			padding-top: 90px;
 			.brands-list {
 				display: flex;
 				gap: 20px;
@@ -95,8 +95,8 @@
 			.title-group {
 				padding: 0;
 				.title {
-					font-size: pxToVw3(70px);
-					gap: pxToVw3(70px);
+					font-size: pxToVw3(60px);
+					gap: pxToVw3(60px);
 					&::before,
 					&::after {
 						width: 22%;

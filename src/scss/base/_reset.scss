@@ -188,7 +188,7 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-	outline: 1px solid #888;
+	outline: 1px solid $primary-color;
 }
 
 button {

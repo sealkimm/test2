@@ -3,6 +3,7 @@
 }
 
 .brand-pg {
+	height: 100vh;
 	padding-top: 100px;
 	.brand-wrap {
 		position: relative;
@@ -16,7 +17,7 @@
 		overflow: hidden;
 		box-sizing: border-box;
 		width: 100%;
-		padding: 160px 20px 260px;
+		padding: 120px 20px 180px;
 		.title-group {
 			.title {
 				display: flex;
@@ -40,8 +41,8 @@
 		.cont-group {
 			display: flex;
 			flex-direction: column;
-			gap: 160px;
-			padding-top: 168px;
+			gap: 100px;
+			padding-top: 90px;
 			.tit {
 				font-size: 30px;
 				font-weight: 600;
@@ -53,8 +54,8 @@
 			}
 			.info-area {
 				display: flex;
-				justify-content: space-between;
 				align-items: center;
+				gap: 120px;
 				.inner {
 					position: relative;
 					max-width: 464px;
@@ -159,28 +160,16 @@
 	@include mob-only {
 		padding-top: 55px;
 		.sc-brand-info {
-			padding: pxToVw3(190px) 20px pxToVw3(280px);
+			padding: pxToVw3(130px) 20px pxToVw3(150px);
 			.title-group {
 				.title {
-					font-size: pxToVw3(70px);
-					gap: pxToVw3(70px);
-					&::after {
-						width: 64%;
-					}
-				}
-			}
-			&.b2 {
-				.title-group {
-					.title {
-						&::after {
-							@include size(23%, 1px);
-						}
-					}
+					font-size: pxToVw3(60px);
+					gap: pxToVw3(60px);
 				}
 			}
 			.cont-group {
-				gap: pxToVw3(208px);
-				padding: pxToVw3(196px) pxToVw3(32px) 0 pxToVw3(32px);
+				gap: pxToVw3(100px);
+				padding: pxToVw3(80px) pxToVw3(32px) 0 pxToVw3(32px);
 				.info-area {
 					flex-direction: column;
 					gap: pxToVw3(100px);
@@ -198,16 +187,35 @@
 						}
 					}
 					.desc {
+						font-size: pxToVw3(30px);
 						span {
 							display: inline-block;
 						}
 					}
 				}
+				.menu-area,
+				.store-area {
+					.tit {
+						font-size: pxToVw3(60px);
+					}
+					.desc {
+						font-size: pxToVw3(38px);
+						margin-top: pxToVw3(20px);
+					}
+				}
+				.menu-area {
+					.menu-swiper {
+						margin-top: pxToVw3(70px);
+					}
+				}
 				.store-area {
 					.store-list {
 						padding: 0;
+						font-size: pxToVw3(34px);
+						margin-top: pxToVw3(70px);
 						strong {
 							display: block;
+							font-size: pxToVw3(38px);
 							margin-bottom: pxToVw3(14px);
 							margin-right: 0;
 							&::after {
@@ -216,6 +224,10 @@
 						}
 					}
 				}
+			}
+			&.b1,
+			&.b2 {
+				padding: pxToVw3(130px) 20px pxToVw3(190px);
 			}
 		}
 	}

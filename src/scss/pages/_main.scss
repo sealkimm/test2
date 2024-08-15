@@ -198,7 +198,7 @@
 		}
 		.menu-group {
 			box-sizing: border-box;
-			padding: 180px 0 126px;
+			padding: 130px 0 126px;
 			background: #fff;
 			border-top-left-radius: 350px;
 			margin-top: 120px;
@@ -245,6 +245,7 @@
 					}
 					li {
 						img {
+							@include size(170px, auto);
 							transform-origin: center bottom;
 							transition: transform .3s ease;
 						}
@@ -374,7 +375,7 @@
 		align-items: center;
 		overflow: hidden;
 		padding: 170px 0 200px;
-		background: linear-gradient(to top,rgba(251,248,240,1) 0%,rgba(251,248,240,0) 100%);
+		background: linear-gradient(to top,rgba(249,243,226,1) 0%,rgba(255,255,255,0) 100%);
 
 		.text-group {
 			@include textPadding();
@@ -614,7 +615,7 @@
 					font-size: pxToVw3(35px);
 				}
 				.title {
-					padding: pxToVw3(40px) 0 pxToVw3(152px);
+					padding: pxToVw3(52px) 0 pxToVw3(152px);
 					font-size: pxToVw3(70px);
 					span {
 						display: block;

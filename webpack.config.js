@@ -94,6 +94,9 @@ module.exports = {
   devServer: {
     host: 'localhost',
     open: true, // npm run dev 시 자동으로 브라우저 open
+    static: {
+      directory: path.join(__dirname, 'dist'), // 이거하면 npm run dev해도 저장이 안됨?? 그러나 깃허브 배포할때 해야됨!
+    },
   },
 };
 
